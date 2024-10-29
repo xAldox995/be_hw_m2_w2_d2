@@ -32,4 +32,14 @@ public class BlogPostController {
         return this.blogPostService.findBlogById(blogId);
     }
 
+    @PutMapping("/{blogId}")
+    public BlogPostEn findBlogByIdAndUpdate(@PathVariable int blogId, @RequestBody BlogPostPL body) {
+        return this.blogPostService.findBlogByIdAndUpdate(blogId, body);
+    }
+
+    @DeleteMapping("/{blogId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void findBlogByIdAndDel(@PathVariable int blogId) {
+        this.blogPostService.findBlogByIdAdnDel(blogId);
+    }
 }
