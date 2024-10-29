@@ -8,8 +8,8 @@ import lombok.ToString;
 @Setter
 @ToString
 public class BlogPostEn {
+    private static int counterId = 1;
     private int id;
-    private int counterId = 1;
     private String categoria;
     private String titolo;
     private String contenuto;
